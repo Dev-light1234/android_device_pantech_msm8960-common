@@ -58,12 +58,9 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
     android.hardware.memtrack@1.0-impl \
     copybit.msm8960 \
     gralloc.msm8960 \
@@ -76,7 +73,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@2.0-service \
     audio.a2dp.default \
     audio.primary.msm8960 \
     audio.r_submix.default \
@@ -158,7 +154,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service
+    android.hardware.gnss@1.0-service \
     com.qualcomm.location \
     flp.msm8960
 
