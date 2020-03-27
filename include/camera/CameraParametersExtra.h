@@ -168,6 +168,7 @@ const char CameraParameters::LGTVT_ON[] = "on";\
 const char CameraParameters::VTS_ON[] = "on";\
 const char CameraParameters::VTS_OFF[] = "off";\
 const char CameraParameters::KEY_VTS[] = "pantech-vts";\
+const char CameraParameters::KEY_CAMERA_MODE[] = "camera-mode";\
 \
 void CameraParameters::getColorExtractionCoordinates(int *x, int *y) const {}\
 void CameraParameters::setColorExtractionCoordinates(int x, int y) {}\
@@ -338,6 +339,7 @@ void CameraParameters::setColorExtractionRGB_R(int x, int y) {}\
     static const char SCENE_MODE_CUSTOM[];\
     static const char VTS_OFF[];\
     static const char VTS_ON[];\
+    static const char KEY_CAMERA_MODE[];\
     int isRunning();\
     int getOlaRotation() const;\
     void getFaceFilterRect(int *x, int *y) const;\
