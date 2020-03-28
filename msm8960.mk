@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 	CE150F02_89.bin \
 	CE150F03_89.bin
 
+# DRM
+PRODUCT_PACKAGES += \
+    libshims_wvm
+
 # Qcom scripts
 PRODUCT_PACKAGES += \
 	init.qcom.bt.sh
