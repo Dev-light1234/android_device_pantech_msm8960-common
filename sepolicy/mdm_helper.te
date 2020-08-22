@@ -15,3 +15,5 @@ allow mdm_helper modem_efs_partition_device:blk_file { getattr rw_file_perms };
 allow mdm_helper mdm_helper_tmpfs:file { create open getattr setattr };
 allow mdm_helper tmpfs:dir { write add_name };
 
+allow mdm_helper toolbox_exec:file { execute read open execute_no_trans getattr };
+

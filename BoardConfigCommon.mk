@@ -46,8 +46,9 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x82200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000
-BOARD_KERNEL_CMDLINE := console=NULL,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 loglevel=0 vmalloc=0x16000000 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=NULL,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 loglevel=0 vmalloc=0x16000000
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -91,6 +92,7 @@ BOARD_USES_SECURE_SERVICES 		:= true
 BOARD_USES_EXTRA_THERMAL_SENSOR 	:= true
 
 # Camera
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -178,7 +180,7 @@ EXTENDED_FONT_FOOTPRINT 			:= true
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
-#BOARD_SEPOLICY_DIRS += \
+BOARD_SEPOLICY_DIRS += \
        device/pantech/msm8960-common/sepolicy
        
 # Wifi
